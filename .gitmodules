@@ -1,0 +1,3 @@
+[submodule "docker-vulnerable-dvwa"]
+	path = docker-vulnerable-dvwa
+	url = https://github.com/banoris/docker-vulnerable-dvwa
